@@ -52,7 +52,7 @@ img{
 
 const parametros = new URLSearchParams(window.location.search);
 
-const codigo = parametros.get("codigo").trim();
+const codigo = parametros.get("codigo").replace(/\s+/g, "").trim();
 
 document.getElementById("produto").src =
 "imagens/" + codigo + ".png";
